@@ -8,6 +8,8 @@ package javaweek2;
 /**
  *
  * @author burge
+ * //
+ * //
  */
 public class StudentList {
     public static void main(String[] args)

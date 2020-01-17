@@ -8,8 +8,6 @@ package javaweek2;
 /**
  *
  * @author burge
- * // >!
- * //
  */
 public class Student {
     private String name;

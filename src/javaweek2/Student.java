@@ -12,6 +12,7 @@ package javaweek2;
 public class Student {
     private String name;
     private String studentID;
+    private String programName;
 
     /**
      * A constructor that takes in both parameters
@@ -65,6 +66,20 @@ public class Student {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+    }
+
+    /**
+     * @return the programName
+     */
+    public String getProgramName() {
+        return programName;
+    }
+
+    /**
+     * @param programName the programName to set
+     */
+    public void setProgramName(String programName) {
+        this.programName = programName;
     }
     
 }

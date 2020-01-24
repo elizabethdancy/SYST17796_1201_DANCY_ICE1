@@ -49,7 +49,7 @@ public class CardTrick {
 
          String message= "";
         for (Card magicHand1 : magicHand) {
-            if ( luckyCard.getValue()= magicHand1.getValue() && luckyCard.getSuit()equals(magicHand1.getSuit())) {
+            if((luckyCard.getValue()== magicHand1.getValue()) && (luckyCard.getSuit()).equals(magicHand1.getSuit())){
                 message = "YOU WON! this is your lucky day! ";
             } else {
                 message = "Try again";

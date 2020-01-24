@@ -45,11 +45,11 @@ public class CardTrick {
         
         for(int i = 0; i < magicHand.length; i++){
             if (cardNumber == magicHand[i].getValue() && suit.equals(magicHand[i].getSuit())){
-                System.out.println("Win");
+                System.out.println("Match");
             }
             else
             {
-                System.out.println("Lose");
+                System.out.println("No match");
             }
             
             }

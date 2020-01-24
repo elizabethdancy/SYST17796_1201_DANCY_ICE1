@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ca.sheridancollege.softwarefundamentals.week3.ice1;
 
 /**
@@ -13,7 +8,7 @@ package ca.sheridancollege.softwarefundamentals.week3.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
- * @modifiedBy Student 1, 2019
+ * @modifiedBy Riley Khan 24/01/2020
  */
 public class Card {
 

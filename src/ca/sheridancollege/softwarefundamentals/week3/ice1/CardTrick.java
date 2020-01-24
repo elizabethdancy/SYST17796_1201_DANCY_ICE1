@@ -5,28 +5,63 @@
  */
 package ca.sheridancollege.softwarefundamentals.week3.ice1;
 
+import java.util.Scanner;
+
 /**
- * A class that fills a magic hand of 7 cards with random Card Objects
- * and then asks the user to pick a card and searches the array of cards
- * for the match to the user's card. To be used as starting code in ICE 1
+ * A class that fills a magic hand of 7 cards with random Card Objects and then
+ * asks the user to pick a card and searches the array of cards for the match to
+ * the user's card. To be used as starting code in ICE 1
+ *
  * @author dancye
  */
 public class CardTrick {
-    
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
+
         Card[] magicHand = new Card[7];
-        
-        for (int i=0; i<magicHand.length; i++)
-        {
+
+        for (int i = 0; i < magicHand.length; i++) {
+            //new card object to be generated for each card in the hand
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+
+            int randomValue = (int) (Math.random() * 13 + 1);
+            int randomSuit = (int) (Math.random() * 3);
+
+            c.setValue(randomValue);
+
+            c.setSuit(Card.SUITS[randomSuit]);
+            magicHand[i] = c;
         }
-        
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Welcome to the card trick app. 7 cards have been selected.");
+        System.out.println("Guess a card that is in this hand.");
+        System.out.println("Please type in a card value between 1 and 13, with"
+                + " 1 being an Ace, 11 being a Jack, 12 a Queen, and 13 a King.");
+        int userValue = input.nextInt();
+        input.nextLine(); //line so that the program doesn't skip the next prompt
+
+        System.out.println("Please type in a suit: Hearts, Diamonds, Clubs, Spades.");
+        String userSuit = input.nextLine();
+
+        Card guess = new Card();
+        guess.setValue(userValue);
+        guess.setSuit(userSuit);
+
+        boolean results = false;
+
+        for (int j = 0; j < magicHand.length; j++) {
+            if (magicHand[j].getSuit().equalsIgnoreCase(userSuit) && magicHand[j].getValue() == (userValue)) {
+                results = true;
+            }
+
+        }
+
+        if (results == true) {
+            System.out.println("Congratulations, the card you guessed is in the hand!");
+        } else {
+            System.out.println("Sorry, your guess was incorrect.");
+        }
     }
-    
 }

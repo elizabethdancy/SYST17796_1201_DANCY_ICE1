@@ -55,6 +55,15 @@ public class CardTrick {
         Card luckyCard = new Card();
         luckyCard.setValue(6);
         luckyCard.setSuit("Hearts");
+        
+        String message = "";
+        for (int i = 0; i < magicHand.length; i++) {
+             if ((luckyCard.getValue() == magicHand[i].getValue()) && (luckyCard.getSuit().equals(magicHand[i].getSuit()))) {
+                 message = "You won!";
+             } else {
+                 message = "Sorry, you were wrong. Try again.";
+             }
+         }
 
         //Then report the result here
         System.out.println(message);

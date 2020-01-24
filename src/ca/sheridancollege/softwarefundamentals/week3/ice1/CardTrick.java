@@ -30,10 +30,10 @@ public class CardTrick {
         
         Card luckyCard = new Card();
         luckyCard.setValue(8);
-        luckCard.setSuit("Hearts");
+        luckyCard.setSuit("Hearts");
         
         for(int i = 0; i < magicHand.length; i++){
-            if(luckCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit()){
+            if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit())){
                 System.out.println("Match");
             }
                else
@@ -68,4 +68,5 @@ public class CardTrick {
         
     }
     
+}
 }

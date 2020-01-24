@@ -36,7 +36,10 @@ public class CardTrick {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Welcome to the card trick app. 7 cards have been selected.");
-        System.out.println("Guess a card that is in this hand.");
+        System.out.println("You are playing to see if the hand contains: Jack of Spades.");
+        
+        /* 
+        Old edits prior to first push
         System.out.println("Please type in a card value between 1 and 13, with"
                 + " 1 being an Ace, 11 being a Jack, 12 a Queen, and 13 a King.");
         int userValue = input.nextInt();
@@ -44,6 +47,7 @@ public class CardTrick {
 
         System.out.println("Please type in a suit: Hearts, Diamonds, Clubs, Spades.");
         String userSuit = input.nextLine();
+        */ 
 
         /*
         Commented out as per #6
@@ -56,21 +60,22 @@ public class CardTrick {
         //card object created after the card's given out in class
         Card luckyCard = new Card();
         luckyCard.setValue(11);
-        luckyCard.setSuit(Spades);
+        luckyCard.setSuit("Spades");
+        
         
         boolean results = false; //variable to help keep track of the result of the for loop
 
         for (int j = 0; j < magicHand.length; j++) {
-            if (magicHand[j].getSuit().equalsIgnoreCase(userSuit) && magicHand[j].getValue() == (userValue)) {
+            if (magicHand[j].getSuit().equalsIgnoreCase("Spades") && magicHand[j].getValue() == (11)) {
                 results = true;
             }
-
-        }
+        } //end of for loop
 
         if (results == true) {
-            System.out.println("Congratulations, the card you guessed is in the hand!");
-        } else {
-            System.out.println("Sorry, your guess was incorrect.");
+            System.out.println("Congratulations, the Jack of Spades is in the hand!");
+        } 
+        else {
+            System.out.println("Sorry, the Jack of Spades isn't here :( ");
         }
     }
 }

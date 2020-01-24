@@ -4,7 +4,7 @@
  */
 package ca.sheridancollege.softwarefundamentals.week3.ice1;
 
-import java.util.Scanner;
+
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then
@@ -28,17 +28,16 @@ public class CardTrick {
             c.setSuit(Card.SUITS[(int) (Math.random() * 4)]);
             magicHand[i]=c;
         }
+        Card luckyCard = new Card();
+        luckyCard.setValue(9);
+        luckyCard.setSuit(spades);
 
         //insert code to ask the user for Card value and suit, create their card
         for (int i = 0; i < magicHand.length; i++) {
             Card c = magicHand[i];
-            System.out.println("Pick a Card number.");
-            int chosenCard = input.nextInt();
-            System.out.println("Pick a suit.");
-            String chosenSuit = input.nextLine();
-            input.nextLine();
+            
             // and search magicHand here
-            if ((c.getValue() == chosenCard) && (c.getSuit().equals(chosenSuit)))
+            if ((c.getValue() == luckyCard.getValue()) && (c.getSuit().equals(luckyCard.setSuit())))
             {
                 System.out.println("Your guess was right.");
             }else{

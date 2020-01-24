@@ -36,37 +36,37 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        Scanner input = new Scanner(System.in);
-        Card cPick = new Card();
-        
-        System.out.println("Tell me your cad number?");
-        int x = input.nextInt();
-        System.out.println("Tell me your cad type? Please enter Hearts, Diamonds, "
-        + "Spades, Clubs");
-        
-        input.nextLine();
-        String y = input.nextLine();
-        
-        cPick.setValue(x);
-        cPick.setSuit(y);
+//        Scanner input = new Scanner(System.in);
+//        Card cPick = new Card();
+//        
+//        System.out.println("Tell me your cad number?");
+//        int x = input.nextInt();
+//        System.out.println("Tell me your cad type? Please enter Hearts, Diamonds, "
+//        + "Spades, Clubs");
+//        
+//        input.nextLine();
+//        String y = input.nextLine();
+//        
+//        cPick.setValue(x);
+//        cPick.setSuit(y);
         //System.out.println(cPick.getSuit()+" "+cPick.getValue());
 
         // and search magicHand here
         System.out.println("So, in my magic hand, let me see if you are lucky?");
         
-        int count=0;
-        for (int i=0; i<magicHand.length; i++){
-            if(magicHand[i].getSuit().equals(cPick.getSuit())&&(magicHand[i].getValue() == cPick.getValue())){
-                count++;
-            }
-        }
-        
-        if(count==0){
-            System.out.println("You lose!");
-        }
-        else{
-            System.out.println("You are lucky!");
-        }
+//        int count=0;
+//        for (int i=0; i<magicHand.length; i++){
+//            if(magicHand[i].getSuit().equals(cPick.getSuit())&&(magicHand[i].getValue() == cPick.getValue())){
+//                count++;
+//            }
+//        }
+//        
+//        if(count==0){
+//            System.out.println("You lose!");
+//        }
+//        else{
+//            System.out.println("You are lucky!");
+//        }
         
         //my luckycard
         Card luckyCard = new Card();

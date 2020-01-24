@@ -8,7 +8,7 @@ package ca.sheridancollege.softwarefundamentals.week3.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
- * @modifiedBy
+ * @modifiedBy Khang Do
  */
 public class Card {
 
@@ -16,7 +16,17 @@ public class Card {
    private int value;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
-    /**
+    
+   public Card(){
+       suit = "Spades";
+       value = 1;
+   }
+   
+   public Card(String suit, int value){
+       setSuit(suit);
+       setValue(value);
+   }
+   /**
      * @return the suit
      */
     public String getSuit() {
@@ -26,8 +36,17 @@ public class Card {
     /**
      * @param suit the suit to set
      */
-    public void setSuit(String suit) {
-        this.suit = suit;
+    public void setSuit(String suit) throws IllegalArgumentException{
+        boolean checkSuit = false;
+        for (String card: SUITS){
+            if (suit.equals(card))
+                checkSuit = true;
+        }
+        
+        if (checkSuit)            
+            this.suit = suit;
+        else throw new IllegalArgumentException("Error: "
+                + "the value should be Hearts, Diamonds, Spades, Clubs");
     }
 
     /**

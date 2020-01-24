@@ -2,6 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ * Xian Qin 991 578 381
  */
 package ca.sheridancollege.softwarefundamentals.week3.ice1;
 import java.util.Scanner;

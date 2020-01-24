@@ -23,22 +23,22 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            c.setValue((int)Math.random() *13);
+            c.setValue(1);
             magicHand[i] = c;
                         
             //c.setValue(insert call to random number generator here)
-            c.setSuit(Card.SUITS[(int)Math.random()*4]);
+            c.setSuit("Hearts");
             magicHand[i] = c;
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
-        Scanner input = new Scanner(System.in);
+//         Scanner input = new Scanner(System.in);
         
-        System.out.println("What card number do you want?");
-        int cardNumber = input.nextInt();
+//         System.out.println("What card number do you want?");
+//         int cardNumber = input.nextInt();
         
-        System.out.println("What is the suit of the card?");
-        String cardSuit = input.nextLine();
-        input.nextLine();
+//         System.out.println("What is the suit of the card?");
+//         String cardSuit = input.nextLine();
+//         input.nextLine();
         //insert code to ask the user for Card value and suit, create their card
         for (Card c : magicHand) {
             if (c.getValue() == cardNumber && c.getSuit().equals(cardSuit)){

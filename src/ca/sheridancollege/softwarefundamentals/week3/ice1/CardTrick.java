@@ -34,22 +34,25 @@ public class CardTrick {
             magicHand[i] = c;
 
         }
+        Card luckyCard= new Card();
+        luckyCard.setSuit("Hearts");
+        luckyCard.setValue(4);
 
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter your Card Suit");
-        String userSuit = sc.nextLine();
-        System.out.println("Enter your Card Value");
-        int userValue = sc.nextInt();
-        Card c1 = new Card();
-        // and search magicHand here
-        for (int i = 0; i < magicHand.length; i++) {
-            if ((magicHand[i].getSuit().equals((userSuit))) && (magicHand[i].getValue() == (userValue))) {
-                System.out.println("Congratulations ! you got it");
+//         System.out.println("Enter your Card Suit");
+//         String userSuit = sc.nextLine();
+//         System.out.println("Enter your Card Value");
+//         int userValue = sc.nextInt();
+//         Card c1 = new Card();
+//         // and search magicHand here
+//         for (int i = 0; i < magicHand.length; i++) {
+//             if ((magicHand[i].getSuit().equals((userSuit))) && (magicHand[i].getValue() == (userValue))) {
+//                 System.out.println("Congratulations ! you got it");
 
-            } else {
-                System.out.println("Sorry, you card is not in here");
-            }
-        }
+//             } else {
+//                 System.out.println("Sorry, you card is not in here");
+//             }
+//         }
         //Then report the result here
     }
     

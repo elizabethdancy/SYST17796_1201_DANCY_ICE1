@@ -36,28 +36,29 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        Scanner in = new Scanner(System.in);
+        Card luckyCard = new Card();
+        luckyCard.setValue(12);
         
-        System.out.println("Please insert your card value guess (Between 1(Ace) and 13(King))");
-        int guessValue = in.nextInt();
+        // I couldn't remember the exact suit of the card
+        luckyCard.setSuit("Hearts");
         
-        in.nextLine();
-        System.out.println("Please type in either Hearts, Diamonds, Spades, Clubs");
-        String guessSuit = in.nextLine();
+//         Scanner in = new Scanner(System.in);
         
-        Card user = new Card();
-        user.setValue(guessValue);
-        user.setSuit(guessSuit);
+//         System.out.println("Please insert your card value guess (Between 1(Ace) and 13(King))");
+//         int guessValue = in.nextInt();
+        
+//         in.nextLine();
+//         System.out.println("Please type in either Hearts, Diamonds, Spades, Clubs");
+//         String guessSuit = in.nextLine();
+        
+//         Card user = new Card();
+//         user.setValue(guessValue);
+//         user.setSuit(guessSuit);
         int countWin = 0;
         
         for (int i=0; i<magicHand.length; i++) {
-            Card c2 = new Card();
-            
-            
-            if ((magicHand[i].getValue()) == (user.getValue())) {
-                //System.out.println("Almost!");
-                if ((magicHand[i].getSuit()).equals(user.getSuit())) {
-                    //System.out.println("You are correct!");
+            if ((magicHand[i].getValue()) == (luckyCard.getValue())) {
+                if ((magicHand[i].getSuit()).equals(luckyCard.getSuit())) {
                     countWin += 1;
                 }
             }

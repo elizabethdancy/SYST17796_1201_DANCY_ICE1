@@ -55,7 +55,7 @@ public class CardTrick {
             }
          System.out.println(count>0? "You win" :"You lose" ); 
          System.out.println("Do you wanna try again? [Y/N]" ); 
-       }while("YES".toLowerCase().contains(scan.next()));*/
+       }while("YES".contains(scan.next().toUpperCase()));*/
         //Create an object and initialize 
         Card luckyCard = new Card(); 
         luckyCard.setValue(8);

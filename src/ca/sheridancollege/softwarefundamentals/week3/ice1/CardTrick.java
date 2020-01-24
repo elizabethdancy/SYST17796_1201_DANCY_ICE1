@@ -29,7 +29,7 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-        Scanner scan = new Scanner(System.in);
+        /*Scanner scan = new Scanner(System.in);
        do{
            int value;
            String suit;
@@ -55,11 +55,18 @@ public class CardTrick {
             }
          System.out.println(count>0? "You win" :"You lose" ); 
          System.out.println("Do you wanna try again? [Y/N]" ); 
-       }while("YES".toLowerCase().contains(scan.next()));
+       }while("YES".toLowerCase().contains(scan.next()));*/
         //Create an object and initialize 
         Card luckyCard = new Card(); 
         luckyCard.setValue(8);
         luckyCard.setSuit("spades");
-        
+            int count=0;
+                for(int i =0;i<7;i++){
+                    if(luckyCard.getSuit().equalsIgnoreCase("magicHand[i].getSuit()") &&
+                       luckyCard.getValue()== magicHand[i].getValue()){
+                         count++;
+                    }
+                }
+             System.out.println(count>0? "You win" :"You lose" );
    }   
 }

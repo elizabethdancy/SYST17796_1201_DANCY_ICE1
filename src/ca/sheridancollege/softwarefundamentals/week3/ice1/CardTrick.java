@@ -43,12 +43,12 @@ public class CardTrick {
         int value = sc.nextInt();
         
         
-        //Card luckyCard = new Card("Spades", 4);
+        Card luckyCard = new Card("Spades", 4);
         
         System.out.println("Please enter a suit: ");
         String suit = scr.nextLine();
         
-        //Card d = new Card(suit, value);
+        Card d = new Card(suit, value);
         // and search magicHand here
         Card c = magicHand[i];
         if((c.getValue() == value) && c.getSuit().equals(suit)){
@@ -58,7 +58,7 @@ public class CardTrick {
         }
         
         //Then report the result here
-        System.out.println("The magic hand is: ");
+       
     }
     
 }

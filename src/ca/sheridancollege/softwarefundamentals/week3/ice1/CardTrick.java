@@ -31,15 +31,18 @@ public class CardTrick {
         }
 
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Please pick a card value");
-        int userCardValue = input.nextInt();
-        input.nextLine();
-        System.out.println("Please pick a card suit");
-        String userCardSuit = input.nextLine();
+        // System.out.println("Please pick a card value");
+        // int userCardValue = input.nextInt();
+        // input.nextLine();
+        // System.out.println("Please pick a card suit");
+        // String userCardSuit = input.nextLine();
+        Card luckyCard = new Card();
+        luckyCard.setValue(13);
+        luckyCard.setSuit("Spades");
         // and search magicHand here
         for (int i = 0; i < magicHand.length; i++) {
             Card c = magicHand[i];
-            if ((userCardValue == c.getValue()) && c.getSuit().equals(userCardSuit)) {
+            if ((luckyCard.getValue() == c.getValue()) && c.getSuit().equals(luckyCard.getSuit())) {
                 //Then report the result here
                 System.out.println("Your card is in the magic hand");
                 break;

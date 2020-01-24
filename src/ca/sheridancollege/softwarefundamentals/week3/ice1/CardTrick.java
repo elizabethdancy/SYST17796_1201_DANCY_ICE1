@@ -28,6 +28,7 @@ public class CardTrick {
             c.setSuit(Card.SUITS[(int) Math.floor(Math.random()* 4)]);
             //Assign a magicHand card
             magicHand[i] = c;
+            System.out.println(magicHand[i].toString());
         }
         
         Card cardPick = new Card();
@@ -37,11 +38,12 @@ public class CardTrick {
         System.out.println("Please pick one card (Clubs 1): ");
         cardPick.setSuit(input.next());
         cardPick.setValue(input.nextInt());
-        
+        System.out.println(cardPick.toString());
         // and search magicHand here
         boolean checkPick = false;
         for (Card c: magicHand){
-            if (c.equals(cardPick))
+            if ((c.getValue() == cardPick.getValue()) 
+                    && (c.getSuit().equals(cardPick.getSuit())))
                 checkPick = true;
         }
         

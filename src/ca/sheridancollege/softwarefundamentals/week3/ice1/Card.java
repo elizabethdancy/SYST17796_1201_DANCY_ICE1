@@ -8,7 +8,8 @@ package ca.sheridancollege.softwarefundamentals.week3.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
- * @modifiedBy
+ * @modifier = Parneet Kaur
+ * Student Number= 991589127
  */
 public class Card {
 

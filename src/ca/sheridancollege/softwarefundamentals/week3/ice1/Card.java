@@ -63,6 +63,18 @@ public class Card {
         this.value = value;
     }
    
-   
+    @Override
+    public boolean equals(Object o) {
+        if (o == null)
+            return false;
+        
+        if (this == o)
+            return true;
+        
+        if (o instanceof Card){
+        Card c = (Card)o;
+        return ((c.getValue() == this.value) && (c.getSuit() == this.suit));
+        } else return false;
+    }
     
 }

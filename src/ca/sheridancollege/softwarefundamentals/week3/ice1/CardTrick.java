@@ -19,52 +19,65 @@ public class CardTrick {
 
     public static void main(String[] args) {
          boolean winner = false;
-        Card newCard = new Card();
-            newCard.setSuit("Hearts");
-            newCard.setValue(7);
+        Card luckyCard = new Card();
+            luckyCard.setSuit("Hearts");
+            luckyCard.setValue(7);
+        
          
-         do {
-            Card[] magicHand = new Card[7];
-            Scanner scan = new Scanner(System.in);
+//          do {
+             Card[] magicHand = new Card[7];
+             Scanner scan = new Scanner(System.in);
         
             
        
 
-             for (int i = 0; i < magicHand.length; i++) {
-                 Card c = new Card();
-                 c.setValue(((int) (Math.random() * 12)) + 1);
-                 c.setSuit(Card.SUITS[((int)Math.random()*3)]);
-                 magicHand[i]=c;
-             }
+              for (int i = 0; i < magicHand.length; i++) {
+                  Card c = new Card();
+                  c.setValue(((int) (Math.random() * 12)) + 1);
+                  c.setSuit(Card.SUITS[((int)Math.random()*3)]);
+                  magicHand[i]=c;
+              }
+        
+        for (int i = 0; i < magicHand.length; i++) {
+                  if ((luckyCard.getValue() == magicHand[i].getValue()) && (luckyCard.getSuit().equals(magicHand[i].getSuit().toLowerCase()))) {
+                      winner = true;
+                  }
+              }
+        if(winner){
+            System.out.println("winner!");
+        }
+        else{
+            System.out.println("loser!");
+        }
 
-             //insert code to ask the user for Card value and suit, create their card
-             System.out.println("Pick a card, any card!");
-             System.out.println("What is your desired card value?");
-             int cardValue = scan.nextInt();
+//              //insert code to ask the user for Card value and suit, create their card
+//              System.out.println("Pick a card, any card!");
+//              System.out.println("What is your desired card value?");
+//              int cardValue = scan.nextInt();
 
-             System.out.println("\nWhat is your desired card suit?"
-                     + "(Hearts, Diamonds, Spades, Clubs)");
+//              System.out.println("\nWhat is your desired card suit?"
+//                      + "(Hearts, Diamonds, Spades, Clubs)");
             
-             scan.next();
+//              scan.next();
             
-             String cardSuit = new String("");
-             cardSuit = scan.nextLine().toLowerCase();
+//              String cardSuit = new String("");
+//              cardSuit = scan.nextLine().toLowerCase();
 
            
-             // and search magicHand here
-             for (int i = 0; i < magicHand.length; i++) {
-                 if ((cardValue == magicHand[i].getValue()) && (cardSuit.equals(magicHand[i].getSuit().toLowerCase()))) {
-                     winner = true;
-                 }
-             }
+//              // and search magicHand here
+//              for (int i = 0; i < magicHand.length; i++) {
+//                  if ((cardValue == magicHand[i].getValue()) && (cardSuit.equals(magicHand[i].getSuit().toLowerCase()))) {
+//                      winner = true;
+//                  }
+//              }
 
-             //Then report the result here
-             if (winner) {
-                 System.out.println("Congrats! You won!");
-             } else {
-                 System.out.println("Sorry, try again!");
-             }
-         } while (!winner);
+//              //Then report the result here
+//              if (winner) {
+//                  System.out.println("Congrats! You won!");
+//              } else {
+//                  System.out.println("Sorry, try again!");
+//              }
+//          } while (!winner);
     }
 
     

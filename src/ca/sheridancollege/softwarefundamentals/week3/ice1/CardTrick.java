@@ -10,7 +10,12 @@ package ca.sheridancollege.softwarefundamentals.week3.ice1;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
+ * 
+ * Modified by Michael Delcore, 991588388
  */
+
+import java.util.Scanner;
+
 public class CardTrick {
     
     public static void main(String[] args)
@@ -20,13 +25,49 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            
+            int randValue = (int)(Math.random() * 13 + 1);
+            int randSuit = (int)(Math.random() * 4);
+            
+            c.setValue(randValue);
+            
+            c.setSuit(Card.SUITS[randSuit]);
+                    
+            magicHand[i] = c;
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        Scanner in = new Scanner(System.in);
+        
+        System.out.println("Please insert your card value guess (Between 1(Ace) and 13(King))");
+        int guessValue = in.nextInt();
+        
+        in.nextLine();
+        System.out.println("Please type in either Hearts, Diamonds, Spades, Clubs");
+        String guessSuit = in.nextLine();
+        
+        Card user = new Card();
+        user.setValue(guessValue);
+        user.setSuit(guessSuit);
+        int countWin = 0;
+        
+        for (int i=0; i<magicHand.length; i++) {
+            Card c2 = new Card();
+            
+            
+            if ((magicHand[i].getValue()) == (user.getValue())) {
+                //System.out.println("Almost!");
+                if ((magicHand[i].getSuit()).equals(user.getSuit())) {
+                    //System.out.println("You are correct!");
+                    countWin += 1;
+                }
+            }
+        }
+        
+        if (countWin >= 1) {
+                System.out.println("You won!");
+            }
+        else {
+            System.out.println("Sorry, none of the cards matched!");
+        }
     }
-    
 }

@@ -18,9 +18,9 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         
-        Card LuckyCard = new Card();
-        LuckyCard.setValue(7);
-        LuckyCard.setSuit("Spades");
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Spades");
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -55,10 +55,11 @@ public class CardTrick {
         Boolean win = false;
         for (int i=0; i<magicHand.length; i++) {
             
-            if (value == magicHand[i].getValue() 
-             && suit.equalsIgnoreCase(magicHand[i].getSuit())  )
+            if (luckyCard.getValue() == magicHand[i].getValue() 
+             && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())  )
             {
                 win = true;
+                
             }
         }   
         //Then report the result here
@@ -67,7 +68,7 @@ public class CardTrick {
         }
         else
         {
-            System.out.println("Try Again!");
+            System.out.println("You Lose, Try Again!");
         }
         
         

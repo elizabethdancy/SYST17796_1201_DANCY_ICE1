@@ -35,23 +35,37 @@ public class CardTrick {
         }
 
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter a card number: ");
-        int cardNum = input.nextInt();
-        input.nextLine();
+        //System.out.println("Enter a card number: ");
+        //int cardNum = input.nextInt();
+        //input.nextLine();
 
-        System.out.println("Enter a suit: ");
-        String cardSuit = input.nextLine();
+        //System.out.println("Enter a suit: ");
+        //String cardSuit = input.nextLine();
 
         // and search magicHand here
-        String report = "";
+        //String report = "";
 
-        for (int j = 0; j < magicHand.length; j++) {
-            if ((cardNum == magicHand[j].getValue()) && (cardSuit.equals(magicHand[j].getSuit()))) {
-                report = "Congratulations!";
+        //for (int j = 0; j < magicHand.length; j++) {
+        //    if ((cardNum == magicHand[j].getValue()) && (cardSuit.equals(magicHand[j].getSuit()))) {
+        //        report = "Congratulations!";
+        //    } else {
+        //        report = "Your card is not in the magic hand of cards!";
+        //    }
+        //}
+        
+        card luckyCard = new Card();
+        luckyCard setValue(3);
+        luckyCard setSuit("Hearts");
+        
+        String report = "";
+        for (int k = 0; k < magicHand.length; k++) {
+            if (luckyCard.getValue() == magicHand[i].getValue()) && (luckyCard.getSuit.equals(magicHand[i].getSuit())) {
+                report = "Your card has been chosen!";
             } else {
-                report = "Your card is not in the magic hand of cards!";
+                report = "Your card hasn't been chosen. Try again!";
             }
         }
+        
         //Then report the result here
         System.out.println("report");
     }

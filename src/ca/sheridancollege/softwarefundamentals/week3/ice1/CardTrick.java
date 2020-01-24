@@ -24,22 +24,16 @@ public class CardTrick {
             Card c = new Card();
             c.setValue (2);
             magicHand[i] = c;
-            c.setSuit(Card.SUITS["Hearts"]);
+            c.setSuit("Hearts");
             
         }
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-        Scanner in = new Scanner(System.in);
-        System.out.println("Pick a card number");
-        int cardNumber = in.nextInt();
-        in.nextLine();
-        System.out.println("Pick a suit of a card");
-        String cardSuit = in.nextLine();
         
         for(Card c : magicHand) {
-            if ((c.getValue() == cardNumber) && (c.getSuit().equals(cardSuit))) {
+            if ((c.getValue() == 2) && (c.getSuit().equals("Hearts"))) {
                 System.out.println("You got a match");
                 break;
         }

@@ -44,20 +44,33 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
+        boolean foundMatch = false;
+
+        /*
         System.out.println("Please enter a Card value");
         int cardValue = in.nextInt();
         
-        in.nextLine();
+        in.nextLine(); // clear input buffer
         
         System.out.println("Please enter a card suit");
-        String cardSuit = in.nextLine();
-        
-        boolean foundMatch = false;
-        
+        String cardSuit = in.nextLine();        
         
         for(int i = 0; i < magicHand.length; i++){
             // if we find a matching value and suit, print correct and break out of the loop
             if(magicHand[i].getValue() == cardValue && magicHand[i].getSuit().equalsIgnoreCase(cardSuit)){
+                foundMatch = true;
+                break;
+            }else{
+                foundMatch = false;
+            }
+        }
+        */
+        Card luckyCard = new Card();
+        luckyCard.setSuit("Hearts");
+        luckyCard.setValue(9);
+        for(int i = 0; i < magicHand.length; i++){
+            // if we find a matching value and suit, print correct and break out of the loop
+            if(magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit())){
                 foundMatch = true;
                 break;
             }else{
@@ -71,9 +84,7 @@ public class CardTrick {
             System.out.println("Sorry, the card and suit you guessed weren't in the list.");
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        
     }
     
 }

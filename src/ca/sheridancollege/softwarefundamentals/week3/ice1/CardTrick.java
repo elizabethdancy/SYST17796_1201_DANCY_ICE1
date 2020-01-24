@@ -44,11 +44,18 @@ public class CardTrick {
        luckyCard.setValue(5);
        luckyCard.setSuit("Diamonds");
        
-       
-       
-       
-       
-       
+        for (int i=0; i<magicHand.length; i++)
+      {
+          if ((magicHand[i].getValue()==5)&&(magicHand[i].getSuit().equals("Diamonds")))
+                  {
+                     System.out.println("Wow! You won");
+                  }
+          else
+          {
+              System.out.println("Sorry, You lost it.");
+             
+          }
+       }
        
 //         System.out.println("please enter the value of your card");
 //         int answer = sc.nextInt();

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.softwarefundamentals.week3.ice1;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects

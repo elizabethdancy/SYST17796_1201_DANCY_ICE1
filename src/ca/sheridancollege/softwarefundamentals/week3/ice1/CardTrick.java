@@ -18,6 +18,8 @@ public class CardTrick {
 
     public static void main(String[] args) {
         Card c = new Card();
+        Card luckyCard = new Card();
+        
         Scanner sc = new Scanner(System.in);
 
         int value;
@@ -45,7 +47,7 @@ public class CardTrick {
 
          String message= "";
         for (Card magicHand1 : magicHand) {
-            if (1 == magicHand1.getValue() && "Diamond".equals(magicHand1.getSuit())) {
+            if ( luckyCard.setValue(1)== magicHand1.getValue() && luckyCard.setSuit("diamond").equals(magicHand1.getSuit())) {
                 message = "YOU WON! this is your lucky day! ";
             } else {
                 message = "Try again";

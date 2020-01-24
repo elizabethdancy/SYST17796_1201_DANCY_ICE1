@@ -73,6 +73,20 @@ public class CardTrick {
         luckyCard.setValue(7);
         luckyCard.setSuit("Diamonds");
         
+        int count1=0;
+        for (int i=0; i<magicHand.length; i++){
+            if(magicHand[i].getSuit().equals(luckyCard.getSuit())&&(magicHand[i].getValue() == luckyCard.getValue())){
+                count1++;
+            }
+        }
+        
+        if(count1==0){
+            System.out.println("You lose!");
+        }
+        else{
+            System.out.println("You are lucky!");
+        }
+        
         
     }
 }

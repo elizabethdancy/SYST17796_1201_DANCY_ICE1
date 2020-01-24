@@ -16,7 +16,7 @@ package ca.sheridancollege.softwarefundamentals.week3.ice1;
 public class CardTrick {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        
 
         Card[] magicHand = new Card[7];
 
@@ -30,14 +30,14 @@ public class CardTrick {
         }
         Card luckyCard = new Card();
         luckyCard.setValue(9);
-        luckyCard.setSuit(spades);
+        luckyCard.setSuit("Spades");
 
         //insert code to ask the user for Card value and suit, create their card
         for (int i = 0; i < magicHand.length; i++) {
             Card c = magicHand[i];
             
             // and search magicHand here
-            if ((c.getValue() == luckyCard.getValue()) && (c.getSuit().equals(luckyCard.setSuit())))
+            if ((c.getValue() == luckyCard.getValue()) && (c.getSuit().equals(luckyCard.getSuit())))
             {
                 System.out.println("Your guess was right.");
             }else{

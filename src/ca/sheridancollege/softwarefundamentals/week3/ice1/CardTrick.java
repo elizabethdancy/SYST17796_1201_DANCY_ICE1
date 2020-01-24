@@ -41,15 +41,20 @@ public class CardTrick {
 //         System.out.println("Enter a card suit (Hearts,Diamonds, Spades,Clubs) : ");
 //         String cardSuit = input.nextLine();
 
-        // and search magicHand here
-        String message = "";
-        for (int i = 0; i < magicHand.length; i++) {
-            if ((cardValue == 6 && cardSuit.equals("Hearts") {
-                message = "You won!";
-            } else {
-                message = "Sorry, you were wrong. Try again.";
-            }
-        }
+//         // and search magicHand here
+//         String message = "";
+//         for (int i = 0; i < magicHand.length; i++) {
+//             if ((cardValue == magicHand[i].getValue()) && (cardSuit.equals(magicHand[i].getSuit()))) {
+//                 message = "You won!";
+//             } else {
+//                 message = "Sorry, you were wrong. Try again.";
+//             }
+//         }
+
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(6);
+        luckyCard.setSuit("Hearts");
 
         //Then report the result here
         System.out.println(message);

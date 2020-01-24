@@ -31,17 +31,20 @@ public class CardTrick {
             magicHand[i] = c;
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
-//         Scanner input = new Scanner(System.in);
-        
-//         System.out.println("What card number do you want?");
-//         int cardNumber = input.nextInt();
-        
-//         System.out.println("What is the suit of the card?");
-//         String cardSuit = input.nextLine();
-//         input.nextLine();
+        Card luckyCard = new Card ();
+         luckyCard.setValue(1);
+         luckyCard.setSuit("Hearts");
+//        Scanner input = new Scanner(System.in);
+//        
+//        System.out.println("What card number do you want?");
+//        int cardNumber = input.nextInt();
+//        
+//        System.out.println("What is the suit of the card?");
+//        String cardSuit = input.nextLine();
+        //input.nextLine();
         //insert code to ask the user for Card value and suit, create their card
         for (Card c : magicHand) {
-            if (c.getValue() == cardNumber && c.getSuit().equals(cardSuit)){
+            if (luckyCard.getValue() == c.getValue() && c.getSuit().equals(luckyCard.getSuit())){
                 System.out.println("you got a match");
             } else {
                 System.out.println("You didnt get a matching card. Please draw a card.");

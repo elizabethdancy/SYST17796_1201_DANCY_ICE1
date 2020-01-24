@@ -62,7 +62,7 @@ public class CardTrick {
         luckyCard.setSuit("spades");
             int count=0;
                 for(int i =0;i<7;i++){
-                    if(luckyCard.getSuit().equalsIgnoreCase("magicHand[i].getSuit()") &&
+                    if(luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit()) &&
                        luckyCard.getValue()== magicHand[i].getValue()){
                          count++;
                     }

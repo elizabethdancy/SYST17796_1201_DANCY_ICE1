@@ -22,9 +22,9 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            c.setValue ((int) Math.random() * 13);
+            c.setValue (2);
             magicHand[i] = c;
-            c.setSuit(Card.SUITS[(int) Math.random() * 3]);
+            c.setSuit(Card.SUITS["Hearts"]);
             
         }
         

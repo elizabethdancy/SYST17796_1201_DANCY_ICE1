@@ -39,7 +39,6 @@ public class CardTrick {
        
        Scanner cardsuit = new Scanner(System.in);
        System.out.println("Enter suit");
-        //card.next();
         suit = cardsuit.nextLine();
         System.out.println();
         

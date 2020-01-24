@@ -34,11 +34,11 @@ public class CardTrick {
         
         for(int i = 0; i < magicHand.length; i++){
             if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit())){
-                System.out.println("Match");
+                System.out.println("Youn win");
             }
                else
                {
-                   System.out.println("No match");
+                   System.out.println("You lose");
                }
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here

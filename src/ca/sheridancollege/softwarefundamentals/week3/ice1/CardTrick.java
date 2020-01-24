@@ -57,7 +57,7 @@ public class CardTrick {
         guess.setSuit(userSuit);
         */
         
-        //card object created after the card's given out in class
+        //card object created after cards were given out in class
         Card luckyCard = new Card();
         luckyCard.setValue(11);
         luckyCard.setSuit("Spades");

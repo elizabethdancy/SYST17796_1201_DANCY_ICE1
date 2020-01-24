@@ -35,15 +35,17 @@ public class CardTrick {
 
         //c.setValue(insert call to random number generator here)
         //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-        System.out.println("Enter a card value: ");
-        int userValue = sc.nextInt();
-        sc.nextLine();
-        System.out.println("Enter a suit: ");
-        String userSuit = sc.nextLine();
+        //This is with no user input 
+        
+//         System.out.println("Enter a card value: ");
+//         int userValue = sc.nextInt();
+//         sc.nextLine();
+//         System.out.println("Enter a suit: ");
+//         String userSuit = sc.nextLine();
 
          String message= "";
         for (Card magicHand1 : magicHand) {
-            if (userValue == magicHand1.getValue() && userSuit.equals(magicHand1.getSuit())) {
+            if (1 == magicHand1.getValue() && "Diamond".equals(magicHand1.getSuit())) {
                 message = "YOU WON! this is your lucky day! ";
             } else {
                 message = "Try again";

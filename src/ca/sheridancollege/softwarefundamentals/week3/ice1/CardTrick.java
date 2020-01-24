@@ -28,30 +28,42 @@ public class CardTrick {
         }
         
         
+        Card luckyCard = new Card();
+        luckyCard.setValue(8);
+        luckCard.setSuit("Hearts");
+        
+        for(int i = 0; i < magicHand.length; i++){
+            if(luckCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit()){
+                System.out.println("Match");
+            }
+               else
+               {
+                   System.out.println("No match");
+               }
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-        int cardNumber;
-        String suit;
-        System.out.println("Enter card number");
-        Scanner card = new Scanner(System.in);
-        cardNumber = card.nextInt();
+//         int cardNumber;
+//         String suit;
+//         System.out.println("Enter card number");
+//         Scanner card = new Scanner(System.in);
+//         cardNumber = card.nextInt();
        
-       Scanner cardsuit = new Scanner(System.in);
-       System.out.println("Enter suit");
-        suit = cardsuit.nextLine();
-        System.out.println();
+//        Scanner cardsuit = new Scanner(System.in);
+//        System.out.println("Enter suit");
+//         suit = cardsuit.nextLine();
+//         System.out.println();
         
-        for(int i = 0; i < magicHand.length; i++){
-            if (cardNumber == magicHand[i].getValue() && suit.equals(magicHand[i].getSuit())){
-                System.out.println("Match");
-            }
-            else
-            {
-                System.out.println("No match");
-            }
+//         for(int i = 0; i < magicHand.length; i++){
+//             if (cardNumber == magicHand[i].getValue() && suit.equals(magicHand[i].getSuit())){
+//                 System.out.println("Match");
+//             }
+//             else
+//             {
+//                 System.out.println("No match");
+//             }
             
-            }
+//             }
         
         
     }

@@ -45,11 +45,20 @@ public class CardTrick {
         System.out.println("Please type in a suit: Hearts, Diamonds, Clubs, Spades.");
         String userSuit = input.nextLine();
 
+        /*
+        Commented out as per #6
+        user's guesses input into a new card object
         Card guess = new Card();
         guess.setValue(userValue);
         guess.setSuit(userSuit);
-
-        boolean results = false;
+        */
+        
+        //card object created after the card's given out in class
+        Card luckyCard = new Card();
+        luckyCard.setValue(11);
+        luckyCard.setSuit(Spades);
+        
+        boolean results = false; //variable to help keep track of the result of the for loop
 
         for (int j = 0; j < magicHand.length; j++) {
             if (magicHand[j].getSuit().equalsIgnoreCase(userSuit) && magicHand[j].getValue() == (userValue)) {

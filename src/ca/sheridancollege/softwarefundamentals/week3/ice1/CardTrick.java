@@ -38,24 +38,36 @@ public class CardTrick {
             magicHand[i]=c;
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
-        System.out.println("please enter the value of your card");
-        int answer = sc.nextInt();
-         System.out.println("please enter the suit of your card");
-        String answer1 = sc.nextLine();
-        Card diamondFive = new Card();
+       
+       
+       Card luckyCard = new Card();
+       luckyCard.setValue(5);
+       luckyCard.setSuit("Diamonds");
+       
+       
+       
+       
+       
+       
+       
+//         System.out.println("please enter the value of your card");
+//         int answer = sc.nextInt();
+//          System.out.println("please enter the suit of your card");
+//         String answer1 = sc.nextLine();
+//         Card diamondFive = new Card();
         
-      for (int i=0; i<magicHand.length; i++)
-      {
-         if ((magicHand[i].getValue()==answer)&&(magicHand[i].getSuit().equals(answer1)))
-                 {
-                    System.out.println("Wow! You won");
-                 }
-         else
-         {
-             System.out.println("Sorry, You lost it.");
+//       for (int i=0; i<magicHand.length; i++)
+//       {
+//          if ((magicHand[i].getValue()==answer)&&(magicHand[i].getSuit().equals(answer1)))
+//                  {
+//                     System.out.println("Wow! You won");
+//                  }
+//          else
+//          {
+//              System.out.println("Sorry, You lost it.");
              
-         }
-      }
+//          }
+//       }
     }
 }
         

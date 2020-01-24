@@ -31,26 +31,27 @@ public class CardTrick {
             System.out.println(magicHand[i].toString());
         }
         
-        Card cardPick = new Card();
-        Scanner input = new Scanner(System.in);
+        //Create a lucky card
+        Card luckyCard = new Card();
+        //Scanner input = new Scanner(System.in);
         
-        //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Please pick one card (Clubs 1): ");
-        cardPick.setSuit(input.next());
-        cardPick.setValue(input.nextInt());
-        System.out.println(cardPick.toString());
+        //Create a lucky card
+        //System.out.println("Please pick one card (Clubs 1): ");
+        luckyCard.setSuit("Diamonds");
+        luckyCard.setValue(8);
+        System.out.println("The lucky card is " + luckyCard.toString());
         // and search magicHand here
         boolean checkPick = false;
         for (Card c: magicHand){
-            if ((c.getValue() == cardPick.getValue()) 
-                    && (c.getSuit().equals(cardPick.getSuit())))
+            if ((c.getValue() == luckyCard.getValue()) 
+                    && (c.getSuit().equals(luckyCard.getSuit())))
                 checkPick = true;
         }
         
         //Then report the result here
         if (checkPick)
-            System.out.println("Wow. You're right. You're a magician.");
-        else System.out.println("Sorry, it's not correct. You can try again.");
+            System.out.println("Wow. You got the lucky card on your hand.");
+        else System.out.println("Sorry, You don't have the lucky card. You can try again.");
     }
     
 }

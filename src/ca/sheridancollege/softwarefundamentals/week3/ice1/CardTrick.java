@@ -53,6 +53,15 @@ public class CardTrick {
 //                 System.out.println("Sorry, you card is not in here");
 //             }
 //         }
+           
+
+             for (int i = 0; i < magicHand.length; i++) {
+             if ((magicHand[i].getSuit().equals("hearts")) && (magicHand[i].getValue() == 4)) {
+                System.out.println("Congratulations ! you got it");
+           } else {
+                System.out.println("Sorry, you card is not in here");
+//             }
+//         }
         //Then report the result here
     }
     

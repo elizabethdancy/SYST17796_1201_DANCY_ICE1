@@ -20,8 +20,11 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
+        
+        // Array that holds 7 card objects with a value and a suit
         Card[] magicHand = new Card[7];
         
+        // Fills the array with card objects created with Math.random
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
@@ -36,6 +39,7 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
+        // Creates card object to be compared to the array
         Card luckyCard = new Card();
         luckyCard.setValue(12);
         
@@ -54,8 +58,11 @@ public class CardTrick {
 //         Card user = new Card();
 //         user.setValue(guessValue);
 //         user.setSuit(guessSuit);
+
+        // Counter used to determine if the user won
         int countWin = 0;
         
+        // Compares the random card objects in the array to the luckyCard object
         for (int i=0; i<magicHand.length; i++) {
             if ((magicHand[i].getValue()) == (luckyCard.getValue())) {
                 if ((magicHand[i].getSuit()).equals(luckyCard.getSuit())) {

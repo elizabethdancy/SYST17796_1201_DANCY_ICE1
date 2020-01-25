@@ -28,8 +28,8 @@ public class CardTrick {
         int value = r.nextInt(13);
         value +=1;
         c.setValue(value);
-      //  luckyCard.setValue(4);
-      //  luckyCard.setSuit("Hearts");
+       luckyCard.setValue(4);
+       luckyCard.setSuit("Hearts");
         String suit = (Card.SUITS[r.nextInt(c.SUITS.length)]) ;
         c.setSuit(suit);
         
@@ -53,15 +53,10 @@ public class CardTrick {
               else { 
               System.out.println("Good luck next time. ");
                       }
-            
-            
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+           
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+       
         
         
         

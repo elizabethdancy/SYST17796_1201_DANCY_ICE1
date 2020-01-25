@@ -32,6 +32,11 @@ public class CardTrick {
         luckyCard.setValue(3);
         luckyCard.setSuit("Diamonds");
         
+        /***********************
+        
+        
+        
+        /
 //        System.out.println("What card number do you want?");
 //        int cardNumber = reader.nextInt();
 //        

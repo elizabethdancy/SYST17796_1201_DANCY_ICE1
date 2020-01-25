@@ -9,6 +9,8 @@ package ca.sheridancollege.softwarefundamentals.week3.ice1;
  * add your name as a modifier.
  * @author dancye
  * @modifiedBy
+ * Name:Sarthak Chanana
+ * Student ID: 991576904
  */
 public class Card {
 

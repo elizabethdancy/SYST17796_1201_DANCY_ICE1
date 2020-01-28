@@ -1,4 +1,9 @@
-package ca.sheridancollege.softwarefundamentals.week3.ice1;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
 /**
  * A class that models playing card Objects. Cards have 
@@ -8,7 +13,7 @@ package ca.sheridancollege.softwarefundamentals.week3.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
- * @modifiedBy
+ * @modifiedBy Student 1, 2019
  */
 public class Card {
 

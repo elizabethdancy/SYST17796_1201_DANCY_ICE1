@@ -1,32 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ca.sheridancollege.softwarefundamentals.week3.ice1;
 
+import java.util.Scanner;
+
 /**
- * A class that fills a magic hand of 7 cards with random Card Objects
- * and then asks the user to pick a card and searches the array of cards
- * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
+ * @modifiedBy Mohammed Rahmoun, 991495036
  */
 public class CardTrick {
-    
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
         Card[] magicHand = new Card[7];
-        
-        for (int i=0; i<magicHand.length; i++)
-        {
+
+        for (int i = 0; i < magicHand.length; i++) {
+            int ranNum1 = (int) (Math.random() * 14);
+            int ranNum2 = (int) (Math.random() * 4);
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setValue(ranNum1);
+            c.setSuit(Card.SUITS[ranNum2]);
+            magicHand[i] = c;
+            System.out.println(c.getValue() + " of " + c.getSuit());
         }
-        
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+
+        System.out.println("Enter the suit of the card:");
+        String cardSuit = in.nextLine();
+        System.out.println("Enter the value of the card:");
+        int cardValue = in.nextInt();
+
+        for (Card c : magicHand) {
+            if (c.getValue() == cardValue && c.getSuit().equals(cardSuit)) {
+                System.out.println("You won");
+                break;
+            } else {
+                System.out.println("You lost");
+                break;
+            }
+        }
     }
-    
+
 }
